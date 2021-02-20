@@ -3,7 +3,7 @@
 # This analysis did not detect any evidence of relaxed selection. 
 # However, if it had, a significant K>1 would indicate intensified selection on test lineages
 # and significant K<1 would indicate relaxed selection on test lineages
-# conda activate hyphy
+# conda activate hyphy # conda create -n hyphy, then, conda install hyphy 
 
 # first step: rm Stop codon for single sequence
 #for i in `ls *.fas`; do 
