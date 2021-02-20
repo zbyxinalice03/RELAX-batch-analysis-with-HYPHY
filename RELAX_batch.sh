@@ -17,7 +17,7 @@ for fasta_file in `ls *.fasta`; do
 	mkdir -p ${name_variable};
 	wait;
 	path=$(readlink -fz ${name_variable}); # to get full {path} to new dir
-	cp $fasta_file ${path}/$fasta_file; # one phy_file for single dir 
+	cp $fasta_file ${path}/$fasta_file; # one fasta_file for single dir 
 	cp test.tree ${path}/test.tree;
 	cat ${path}/$fasta_file ${path}/test.tree > ${path}/${name_variable}.fna;
 	nohup hyphy relax  CPU=20 --alignment ${path}/${name_variable}.fna\
