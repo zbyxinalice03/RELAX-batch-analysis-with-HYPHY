@@ -32,7 +32,7 @@ for fasta_file in `ls *.fasta`; do
 	rm ${path}/genename ${path}/Kvalue ${path}/Pvalue;
 	cat *.K_P.list > relax.genes.txt
 done
-	
-ls ./*/*.output | wc -l 
+
+# ls ./*/*.output | wc -l 
 	
 	
