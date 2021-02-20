@@ -18,8 +18,8 @@ for fasta_file in `ls *.fasta`; do
 	wait;
 	path=$(readlink -fz ${name_variable}); # to get full {path} to new dir
 	cp $fasta_file ${path}/$fasta_file; # one phy_file for single dir 
-	cp 14-RELAX-test.tree ${path}/14-RELAX-test.tree;
-	cat ${path}/$fasta_file ${path}/14-RELAX-test.tree > ${path}/${name_variable}.fna;
+	cp test.tree ${path}/test.tree;
+	cat ${path}/$fasta_file ${path}/test.tree > ${path}/${name_variable}.fna;
 	nohup hyphy relax  CPU=20 --alignment ${path}/${name_variable}.fna\
 	--test test --output ${path}/${name_variable}.relax.json --grid-size 250 --starting-points 1 \
 	--rates 3 --models All --srv No  --reference-group Unlabeled branches --syn-rates 3 --save-fit /dev/null > ${path}/${name_variable}.output 2>&1 &;
